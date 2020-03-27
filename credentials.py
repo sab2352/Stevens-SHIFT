@@ -1,2 +1,2 @@
-my_username = "test002"
-my_password = "password"
+my_username = "tbd"
+my_password = "KDJKdym8uf4zu7bL"
