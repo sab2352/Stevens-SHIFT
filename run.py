@@ -26,7 +26,7 @@ print(
 )
 
 
-tickets = ['MCD', 'NKE', 'PG', 'WMT']
+tickets = ['CS1', 'CS2']
 rangePERCENT = [0.0126, 0.0159, 0.0133, 0.0135]
 openPrice = []
 increment = [0, 0.0001, 0.0005, 0.001, 0.0015, 0.002, 0.003, 0.04, 0.005, 0.07]
@@ -49,21 +49,21 @@ for i in range(4):
         trader.submit_order(limit_sell)
 
 
-tickets = ['AAPL', 'CSCO', 'MSFT', 'IBM']
-rangePERCENT = [0.0174, 0.0167, 0.015, 0.014]
-openPrice = []
-increment = [0, 0.0001, 0.0005, 0.001, 0.0015, 0.002, 0.003, 0.04, 0.005, 0.07]
-for i in range(4):
-    a = trader.get_best_price(tickets[i])
+#tickets = ['AAPL', 'CSCO', 'MSFT', 'IBM']
+#rangePERCENT = [0.0174, 0.0167, 0.015, 0.014]
+#openPrice = []
+#increment = [0, 0.0001, 0.0005, 0.001, 0.0015, 0.002, 0.003, 0.04, 0.005, 0.07]
+#for i in range(4):
+#    a = trader.get_best_price(tickets[i])
 
-    openPrice.append((a.get_bid_price() + a.get_ask_price()) / 2)
+#    openPrice.append((a.get_bid_price() + a.get_ask_price()) / 2)
 
-    limit_buy = shift.Order(shift.Order.Type.LIMIT_BUY, tickets[i], 1, openPrice[0]+0.01)
-    trader.submit_order(limit_buy)
+#    limit_buy = shift.Order(shift.Order.Type.LIMIT_BUY, tickets[i], 1, openPrice[0]+0.01)
+#    trader.submit_order(limit_buy)
 
-    for k in increment:
-        limit_buy = shift.Order(shift.Order.Type.LIMIT_BUY, tickets[i], 1, openPrice[i]*(1-rangePERCENT[i]/2-k))
-        trader.submit_order(limit_buy)
+#    for k in increment:
+#        limit_buy = shift.Order(shift.Order.Type.LIMIT_BUY, tickets[i], 1, openPrice[i]*(1-rangePERCENT[i]/2-k))
+#        trader.submit_order(limit_buy)
 
 print(
     "Symbol\t\t\t\tType\t  Price\t\tSize\tExecuted\tID\t\t\t\t\t\t\t\t\t\t\t\t\t\t Status\t\tTimestamp"
