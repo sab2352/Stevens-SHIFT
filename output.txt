@@ -1,6 +1,6 @@
 [[32;1;1mINFO[0m] Connection established.
 Buying Power	Total Shares	Total P&L	Timestamp
-        0.00	           0	     0.00	2020-04-26 10:52:28.820157
+        0.00	           0	     0.00	2020-05-02 10:34:15.111070
 Traceback (most recent call last):
   File "run.py", line 37, in <module>
     a = trader.get_best_price(tickets[i])
